@@ -1,5 +1,6 @@
-using Microsoft.EntityFrameworkCore;
 using EquipmentApi.Data;
+using EquipmentApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EquipmentApi
 {
@@ -32,6 +33,7 @@ namespace EquipmentApi
 
             app.UseAuthorization();
 
+            // 全域例外處理
             app.UseExceptionHandler(errorApp =>
             {
                 errorApp.Run(async context =>
@@ -46,6 +48,19 @@ namespace EquipmentApi
             });
 
             app.MapControllers();
+
+            // 種子資料
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context = services.GetRequiredService<AppDbContext>();
+                context.Database.EnsureCreated();
+                if (!context.Equipments.Any())
+                {
+                    context.Equipments.Add(new Equipment { Name = "蝕刻機", Company = "應材", Area = "A區", InstallationDate = new DateTime(2024, 5, 20) });
+                    context.SaveChanges();
+                }
+            }
 
             app.Run();
         }
