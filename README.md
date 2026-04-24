@@ -1,7 +1,7 @@
 # *EquipmentAPI*
 
 ## 專案簡介 :
-基於ASP.NET Core Web API開發的輕量設備資料管理系統。專案以RESTful架構實作完整的CRUD操作，使用LINQ語法進行高效的資料查詢，並結合DTO物件以及例外處理機制來提升資料庫的安全性。
+基於ASP.NET Core Web API開發的輕量設備資料管理API系統。專案以RESTful架構實作完整的CRUD操作，使用LINQ語法進行高效的資料查詢，並結合DTO物件以及例外處理機制來提升資料庫的安全性。
 
 ## 專案技術 :
 - Language : C#
