@@ -11,7 +11,7 @@
 - Design Pattern : DTO
 - API Documentation : Swagger (OpenAPI)
 
-## 專案核心 :
+## 專案特點 :
 - 設備資料管理 : 透過LINQ方法語法進行資料的篩選與投影，實作完整的資料新增、查詢、更新以及刪除功能。
 - DTO封裝分離 : 為了提升安全、效能以及維護性，針對資料的回傳、新增以及更新，區分成三種用途的DTO物件。
 - 雙層例外處理 : 除了針對業務邏輯捕捉預期錯誤之外，也針對非預期異常實作全域例外處理。
@@ -27,5 +27,4 @@
 - dotnet restore
 - dotnet run
 3. Swagger測試 :
-- 當終端機顯示 Now listening on: https://localhost:xxxx 時，請開啟瀏覽器輸入該網址，並在網址最後加上 /swagger 以進入測試介面
-- 範例 : https://localhost:xxxx/swagger
+- 當終端機顯示 Now listening on: https://localhost:xxxx 時，請開啟瀏覽器輸入該網址，並在網址最後加上 /swagger 以進入測試介面(範例 : https://localhost:xxxx/swagger)
