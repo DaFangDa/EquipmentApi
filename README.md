@@ -24,5 +24,5 @@
 2. 還原與執行專案 : 執行以下指令來下載專案套件與啟動伺服器
 - dotnet restore
 - dotnet run
-3. Swagger測試 :
+3. Swagger測試專案 :
 - 當終端機顯示 Now listening on: https://localhost:xxxx 時，請開啟瀏覽器輸入該網址，並在網址最後加上 /swagger 以進入測試介面(範例 : https://localhost:xxxx/swagger)
